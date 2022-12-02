@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+ <ImageView
+     android:id="@+id/googleimg"
+     android:layout_width="100dp"
+     android:layout_height="50dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:srcCompat="@drawable/google"
+
+     >
+
+ </ImageView>
+    <TextView
+        android:layout_marginTop="10dp"
+android:textSize="30dp"
+        android:id="@+id/createText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create your Google Account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/googleimg"
+
+        ></TextView>
+    <EditText
+
+        android:id="@+id/firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/createText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="First Name"
+        android:outlineProvider="paddedBounds"
+        ></EditText>
+
+ <EditText
+     android:id="@+id/LastName"
+
+     style="@style/Widget.AppCompat.AutoCompleteTextView"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="10dp"
+     android:hint="Last Name"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/firstName"></EditText>
+    <EditText
+        android:layout_marginTop="10dp"
+
+        android:id="@+id/UserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/LastName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="User Name"
+        ></EditText>
+    <TextView
+        android:layout_marginTop="0dp"
+
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserName"
+        android:text="you can use litter ,numbers periods"
+        ></TextView>
+    <TextView
+        android:layout_marginTop="15dp"
+        android:textColor="@color/purple_700"
+
+        android:id="@+id/URL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/hint"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Use my current Email address instead"
+        android:clickable="true"
+        android:textColorLink="@android:color/holo_blue_bright"></TextView>
+
+    <EditText
+        android:layout_marginTop="20dp"
+
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:password="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/URL"
+        android:hint="password"></EditText>
+    <EditText
+        android:layout_marginTop="20dp"
+
+        android:id="@+id/confirmPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:password="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        android:hint="confirm"></EditText>
+    <TextView
+        android:id="@+id/passHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:password="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPass"
+        android:hint="use 8 or more characters with a mix of letters ,nummbers and symbols"></TextView>
+    <CheckBox
+        android:layout_marginTop="10dp"
+
+        android:id="@+id/seePass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/passHint"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Show Password"></CheckBox>
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/seePass"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/purple_700"
+        android:text="Sign in instead"
+        android:clickable="true"></TextView>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/seePass"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Next"></Button>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
